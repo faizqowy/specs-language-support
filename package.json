@@ -28,5 +28,9 @@
         "path": "./icons/specs-icon-theme.json"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/specs-language-support.git"
   }
 }
