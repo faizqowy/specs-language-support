@@ -1,0 +1,32 @@
+{
+  "name": "specs-file",
+  "displayName": "specs-file",
+  "description": "Specs file support for vscode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "specs",
+      "aliases": ["specs-file", "specs"],
+      "extensions": [".specs",".spc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "specs",
+      "scopeName": "source.specs",
+      "path": "./syntaxes/specs.tmLanguage.json"
+    }],
+    "iconThemes": [
+      {
+        "id": "specs-icons",
+        "label": "Specs File Icons",
+        "path": "./icons/specs-icon-theme.json"
+      }
+    ]
+  }
+}

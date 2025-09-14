@@ -1,0 +1,10 @@
+{
+  "iconDefinitions": {
+    "specs-icon": {
+      "iconPath": "./specs-icon.svg"
+    }
+  },
+  "fileExtensions": {
+    "specs": "specs-icon"
+  }
+}

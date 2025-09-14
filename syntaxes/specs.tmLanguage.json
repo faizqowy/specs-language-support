@@ -1,0 +1,70 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "specs-file",
+  "scopeName": "source.specs",
+  "patterns": [
+    { "include": "#keywords" },
+    { "include": "#strings" },
+    { "include": "#operators" },
+    { "include": "#sections" },
+    { "include": "#identifiers" },
+    { "include": "#comments" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(services|routes|seq|constraints|comm|policies|properties|require|forbid|always|eventually|authRequired|rateLimit|timeout|retry)\\b",
+          "name": "keyword.control.specs"
+        },
+        {
+          "match": "\\b(GET|POST|PUT|DELETE|PATCH|sync|async)\\b",
+          "name": "storage.type.specs"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.specs",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.specs",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "match": "->|\\||=|:|;|\\-|\\(|\\)",
+          "name": "keyword.operator.specs"
+        }
+      ]
+    },
+    "sections": {
+      "patterns": [
+        {
+          "match": "\\b(OrderService|PaymentService|NotificationService|BonusService)\\b",
+          "name": "entity.name.section.specs"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+          "name": "variable.other.specs"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": "#.*$",
+          "name": "comment.line.number-sign.specs"
+        }
+      ]
+    }
+  }
+}
